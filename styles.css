@@ -1,78 +1,103 @@
-  body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #ffccdc;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-  }
+/* Establecer el fondo y el alineamiento de todo el contenido */
+body {
+      font-family: Arial, sans-serif;
+      background-color: #ffccdc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Ocupa toda la altura de la pantalla */
+      text-align: center;
+      overflow: hidden;
+}
 
-  .container {
-        margin-top: 100px;
-        align-items: center;
-  }
+.container {
+      /* El contenedor que tendrá el contenido */
+      padding: 20px;
+      max-width: 600px;
+      /* Limitar el tamaño máximo */
+      width: 90%;
+      /* Asegura que el contenedor se ajuste al tamaño de la pantalla */
+}
 
-  h1 {
-        color: #d63384;
-  }
+h1 {
+      color: #d63384;
+      margin-bottom: 20px;
+}
 
-  p {
-        font-size: 22px;
-        color: #333;
-        font-weight: bold;
-        margin-bottom: 20px;
-  }
+p {
+      font-size: 22px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 20px;
+}
 
-  .message {
-        font-size: 18px;
-        color: #555;
-        margin-bottom: 30px;
-  }
+.message {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+}
 
-  .buttons {
-      align-content: center;
-        margin-top: 20px;
-  }
+.buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      /* Espacio entre botones */
+}
 
-  button {
-      
-        font-size: 18px;
-        padding: 12px 24px;
-        margin: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-  }
+/* Estilo de los botones */
+button {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+      /* Evitar que los botones se encojan */
+}
 
-  .yes {
-        background-color: #28a745;
-        color: white;
-        font-weight: bold;
-  }
+.yes {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+}
 
-  .no {
-        background-color: #dc3545;
-        color: white;
-        font-weight: bold;
-        position: absolute;
-  }
+.no {
+      background-color: #dc3545;
+      color: white;
+      font-weight: bold;
+}
 
-  /* Animación de corazones */
-  .heart {
-        position: absolute;
-        color: red;
-        font-size: 24px;
-        animation: floatUp 4s linear infinite;
-  }
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+      h1 {
+            font-size: 24px;
+            /* Ajustar tamaño del título */
+      }
 
-  @keyframes floatUp {
-        0% {
-              transform: translateY(0);
-              opacity: 1;
-        }
+      p {
+            font-size: 18px;
+            /* Ajustar tamaño del texto */
+      }
 
-        100% {
-              transform: translateY(-100vh);
-              opacity: 0;
-        }
-  }
+      .message {
+            font-size: 16px;
+            /* Ajustar tamaño del mensaje */
+      }
+
+      .buttons {
+            flex-direction: column;
+            /* Hacer que los botones se apilen verticalmente */
+      }
+
+      button {
+            width: 100%;
+            /* Asegurar que los botones ocupen el 100% del ancho disponible */
+            font-size: 16px;
+            /* Ajustar el tamaño de fuente de los botones */
+      }
+}
