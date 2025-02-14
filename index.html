@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -81,8 +81,8 @@
         function moverBoton(boton) {
             let x = Math.random() * (window.innerWidth - boton.offsetWidth);
             let y = Math.random() * (window.innerHeight - boton.offsetHeight);
-            boton.style.left = ${x}px;
-            boton.style.top = ${y}px;
+            boton.style.left = '${x}px';
+            boton.style.top = '${y}px';
         }
 
         // Función para generar corazones flotantes
@@ -93,7 +93,7 @@
             document.body.appendChild(heart);
 
             let x = Math.random() * window.innerWidth;
-            heart.style.left = ${x}px;
+            heart.style.left = '${x}px';
 
             setTimeout(() => {
                 heart.remove();
@@ -102,19 +102,5 @@
 
         setInterval(crearCorazones, 500);
     </script>
-</body>
-</html>
---->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Hola chiquita</title>
-</head>
-<body>
-      <h1>Hola Melannie.. </h1>
-<h2>Love YOU</h2>
-      
 </body>
 </html>
