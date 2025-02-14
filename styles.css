@@ -13,6 +13,38 @@ body {
       overflow: hidden;
 }
 
+/* Estilos para los corazones */
+.heart {
+      position: absolute;
+      font-size: 30px;
+      color: red;
+      bottom: 0;
+      /* Iniciar en la parte inferior */
+      animation: flotar 4s ease-in-out forwards;
+}
+
+/* Animación para los corazones flotantes */
+@keyframes flotar {
+      0% {
+            bottom: 0;
+            opacity: 1;
+      }
+
+      100% {
+            bottom: 100%;
+            opacity: 0;
+      }
+}
+
+/* Agregar un contenedor para contenido adicional */
+.container {
+      padding: 20px;
+      max-width: 600px;
+      width: 90%;
+      z-index: 1;
+      /* Asegura que el contenido no se tape con los corazones */
+}
+
 .container {
       /* El contenedor que tendrá el contenido */
       padding: 20px;

@@ -26,31 +26,32 @@
       </div>
 
     <script >
-       // Función para mover el botón a una posición aleatoria
-            function moverBoton(boton) {
-                  let x = Math.random() * (window.innerWidth - boton.offsetWidth);
-                  let y = Math.random() * (window.innerHeight - boton.offsetHeight);
-                  boton.style.left = `${x}px`;  
-                  boton.style.top = `${y}px`;   
-            }
+       
+                  function crearCorazones() {
+                        const heart = document.createElement("div");
+                        heart.classList.add("heart");
+                        heart.innerHTML = "❤";
+                        document.body.appendChild(heart);
 
-            // Función para generar corazones flotantes
-            function crearCorazones() {
-                  const heart = document.createElement("div");
-                  heart.classList.add("heart");
-                  heart.innerHTML = "❤";
-                  document.body.appendChild(heart);
+                        // Posición aleatoria en el eje X, pero asegurándonos que está en la parte inferior
+                        let x = Math.random() * window.innerWidth;
+                        let y = window.innerHeight - 50;  // Colocamos el corazón en la parte inferior, con margen
 
-                  let x = Math.random() * window.innerWidth;
-                  heart.style.left = `${x}px`;  // Usar comillas invertidas
+                        heart.style.left = `${x}px`;
+                        heart.style.bottom = `${y}px`;  // Colocamos el corazón en la parte inferior de la página
 
-                  setTimeout(() => {
-                        heart.remove();
-                  }, 4000);
-            }
+                        // Animación para que los corazones se muevan hacia arriba
+                        heart.style.animation = "flotar 4s ease-in-out forwards";
 
-            // Crear corazones cada 500 ms
-            setInterval(crearCorazones, 500);
+                        // Eliminar el corazón después de 4 segundos
+                        setTimeout(() => {
+                              heart.remove();
+                        }, 4000);
+                  }
+
+                  // Crear corazones flotantes cada 500 ms
+                  setInterval(crearCorazones, 500);
+
 
     </script>
 </body>
