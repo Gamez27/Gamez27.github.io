@@ -35,6 +35,7 @@ p {
 }
 
 .message {
+      font-style: italic;
       font-size: 18px;
       color: #555;
       margin-bottom: 30px;

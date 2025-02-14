@@ -10,24 +10,28 @@
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>¡Hola mi amor! ❤</h1>
         <p>¿Quieres ser mi San Valentín? 🌹</p>
+        
         <p class="message">Desde que te conocí, supe que mi corazón solo latiría por ti.  
         Eres la razón de mi sonrisa, la luz de mis días y el amor de mi vida. 💖</p>
+        
         <div class="buttons">
-            <button class="yes" onclick="alert('¡Sabía que dirías que sí! Te amo con todo mi corazón ❤')">Sí, obvio 💕</button>
+            <button class="yes" onclick="alert('¡Sabía que dirías que sí! Te amo con todo mi corazón ❤')">Sí, obvioo.. 💕</button>
             <button class="no" onmouseover="moverBoton(this)">No 😢</button>
         </div>
-    </div>
+    
+      </div>
 
     <script >
        // Función para mover el botón a una posición aleatoria
             function moverBoton(boton) {
                   let x = Math.random() * (window.innerWidth - boton.offsetWidth);
                   let y = Math.random() * (window.innerHeight - boton.offsetHeight);
-                  boton.style.left = `${x}px`;  // Usar comillas invertidas
-                  boton.style.top = `${y}px`;   // Usar comillas invertidas
+                  boton.style.left = `${x}px`;  
+                  boton.style.top = `${y}px`;   
             }
 
             // Función para generar corazones flotantes
