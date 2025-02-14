@@ -1,16 +1,16 @@
 /* Establecer el fondo y el alineamiento de todo el contenido */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffccdc;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* Ocupa toda la altura de la pantalla */
-    text-align: center;
-    overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #ffccdc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Ocupa toda la altura de la pantalla */
+      text-align: center;
+      overflow: hidden;
 }
 
 /* Contenedor para los corazones */
@@ -53,55 +53,55 @@ body {
 }
 
 h1 {
-    color: #d63384;
-    margin-bottom: 20px;
+      color: #d63384;
+      margin-bottom: 20px;
 }
 
 p {
-    font-size: 22px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-style: italic;
+      font-size: 22px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-style: italic;
 }
 
 .message {
-    font-style: italic;
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
+      font-style: italic;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
 }
 
 .buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    /* Espacio entre botones */
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      /* Espacio entre botones */
 }
 
 /* Estilo de los botones */
 button {
-    font-size: 18px;
-    padding: 12px 24px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    flex-shrink: 0;
-    /* Evitar que los botones se encojan */
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+      /* Evitar que los botones se encojan */
 }
 
 .yes {
-    background-color: #28a745;
-    color: white;
-    font-weight: bold;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
 }
 
 .no {
-    background-color: #dc3545;
-    color: white;
-    font-weight: bold;
+      background-color: #dc3545;
+      color: white;
+      font-weight: bold;
 }
 
 /* Estilos para el modal */
@@ -115,13 +115,11 @@ button {
     height: 100%;
     overflow: auto; /* Habilita el scroll si es necesario */
     background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro y transparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-content {
     background-color: #fefefe;
+    margin: 15% auto; /* Centrado vertical y horizontal */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -129,14 +127,11 @@ button {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    position: relative;
 }
 
 .close {
     color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    float: right;
     font-size: 28px;
     font-weight: bold;
 }
@@ -150,30 +145,30 @@ button {
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 24px;
-        /* Ajustar tamaño del título */
-    }
+      h1 {
+            font-size: 24px;
+            /* Ajustar tamaño del título */
+      }
 
-    p {
-        font-size: 18px;
-        /* Ajustar tamaño del texto */
-    }
+      p {
+            font-size: 18px;
+            /* Ajustar tamaño del texto */
+      }
 
-    .message {
-        font-size: 16px;
-        /* Ajustar tamaño del mensaje */
-    }
+      .message {
+            font-size: 16px;
+            /* Ajustar tamaño del mensaje */
+      }
 
-    .buttons {
-        flex-direction: column;
-        /* Hacer que los botones se apilen verticalmente */
-    }
+      .buttons {
+            flex-direction: column;
+            /* Hacer que los botones se apilen verticalmente */
+      }
 
-    button {
-        width: 100%;
-        /* Asegurar que los botones ocupen el 100% del ancho disponible */
-        font-size: 16px;
-        /* Ajustar el tamaño de fuente de los botones */
-    }
+      button {
+            width: 100%;
+            /* Asegurar que los botones ocupen el 100% del ancho disponible */
+            font-size: 16px;
+            /* Ajustar el tamaño de fuente de los botones */
+      }
 }
