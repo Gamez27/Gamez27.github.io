@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>¿Quieres ser mi San Valentín?</title>
-    <style>
-      
-    </style>
 </head>
 <body>
 
@@ -19,40 +16,47 @@
         Eres la razón de mi sonrisa, la luz de mis días y el amor de mi vida. 💖</p>
         
         <div class="buttons">
-            <button class="yes" onclick="alert('¡Sabía que dirías que sí! Te amo con todo mi corazón ❤')">Sí, obvioo.. 💕</button>
-            <button class="no" onmouseover="moverBoton(this)">No 😢</button>
+            <button class="yes">Sí, obvioo.. 💕</button>
+            <button class="no">No 😢</button>
         </div>
-    
-      </div>
+    </div>
 
-    <script >
-       
-                  function crearCorazones() {
-                        const heart = document.createElement("div");
-                        heart.classList.add("heart");
-                        heart.innerHTML = "❤";
-                        document.body.appendChild(heart);
+    <!-- Contenedor para los corazones -->
+    <div id="heart-container"></div>
 
-                        // Posición aleatoria en el eje X, pero asegurándonos que está en la parte inferior
-                        let x = Math.random() * window.innerWidth;
-                        let y = window.innerHeight - 50;  // Colocamos el corazón en la parte inferior, con margen
+    <script>
+        function crearCorazones() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+            document.getElementById("heart-container").appendChild(heart);
 
-                        heart.style.left = `${x}px`;
-                        heart.style.bottom = `${y}px`;  // Colocamos el corazón en la parte inferior de la página
+            let x = Math.random() * window.innerWidth;
+            let y = window.innerHeight - 50;
 
-                        // Animación para que los corazones se muevan hacia arriba
-                        heart.style.animation = "flotar 4s ease-in-out forwards";
+            heart.style.left = `${x}px`;
+            heart.style.bottom = `${y}px`;
 
-                        // Eliminar el corazón después de 4 segundos
-                        setTimeout(() => {
-                              heart.remove();
-                        }, 4000);
-                  }
+            heart.style.animation = "flotar 4s ease-in-out forwards";
 
-                  // Crear corazones flotantes cada 500 ms
-                  setInterval(crearCorazones, 500);
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
 
+        setInterval(crearCorazones, 500);
 
+        document.querySelector('.yes').addEventListener('click', () => {
+            alert('¡Sabía que dirías que sí! Te amo con todo mi corazón ❤');
+        });
+
+        document.querySelector('.no').addEventListener('mouseover', (event) => {
+            moverBoton(event.target);
+        });
+
+        function moverBoton(button) {
+            // Lógica para mover el botón
+        }
     </script>
 </body>
 </html>
