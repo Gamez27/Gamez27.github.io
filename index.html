@@ -1,13 +1,120 @@
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffccdc;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        p {
+            font-size: 22px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+        }
+        /* Animación de corazones */
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 24px;
+            animation: floatUp 4s linear infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola mi amor! ❤</h1>
+        <p>¿Quieres ser mi San Valentín? 🌹</p>
+        <p class="message">Desde que te conocí, supe que mi corazón solo latiría por ti.  
+        Eres la razón de mi sonrisa, la luz de mis días y el amor de mi vida. 💖</p>
+        <div class="buttons">
+            <button class="yes" onclick="alert('¡Sabía que dirías que sí! Te amo con todo mi corazón ❤')">Sí, obvio 💕</button>
+            <button class="no" onmouseover="moverBoton(this)">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function moverBoton(boton) {
+            let x = Math.random() * (window.innerWidth - boton.offsetWidth);
+            let y = Math.random() * (window.innerHeight - boton.offsetHeight);
+            boton.style.left = ${x}px;
+            boton.style.top = ${y}px;
+        }
+
+        // Función para generar corazones flotantes
+        function crearCorazones() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+            document.body.appendChild(heart);
+
+            let x = Math.random() * window.innerWidth;
+            heart.style.left = ${x}px;
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        setInterval(crearCorazones, 500);
+    </script>
+</body>
+</html>
+--->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Hola chiquita</title>
 </head>
 <body>
-      <h1>Hellooo</h1>
-
-      <h2>Prueba commit</h2>
+      <h1>Hola Melannie.. </h1>
+<h2>Love YOU</h2>
+      
 </body>
 </html>
